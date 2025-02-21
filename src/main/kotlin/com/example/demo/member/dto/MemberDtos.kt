@@ -4,7 +4,6 @@ import com.example.demo.common.annotation.ValidEnum
 import com.example.demo.common.status.Gender
 import com.example.demo.member.entity.Member
 import com.fasterxml.jackson.annotation.JsonProperty
-import jakarta.validation.Valid
 import jakarta.validation.constraints.Email
 import jakarta.validation.constraints.NotBlank
 import jakarta.validation.constraints.Pattern
@@ -50,15 +49,15 @@ data class MemberDtoRequest(
 ) {
     val loginId: String
         get() = _loginId!!
-    val password: String
+    private val password: String
         get() = _password!!
-    val name: String
+    private val name: String
         get() = _name!!
-    val birthDate: LocalDate
+    private val birthDate: LocalDate
         get() = _birthDate!!.toLocalDate()
-    val gender: Gender
+    private val gender: Gender
         get() = Gender.valueOf(_gender!!)
-    val email: String
+    private val email: String
         get() = _email!!
 
     private fun String.toLocalDate(): LocalDate {

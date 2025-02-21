@@ -26,7 +26,7 @@ class VlalidEnumValidator : ConstraintValidator<ValidEnum, Any> {
 
     override fun isValid(value: Any?, context: ConstraintValidatorContext?): Boolean {
         if (value == null) {
-            return true;
+            return true
         }
 
         return enumValues.any { it.name == value.toString() }
