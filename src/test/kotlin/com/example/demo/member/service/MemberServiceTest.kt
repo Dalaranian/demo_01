@@ -23,8 +23,8 @@ class MemberServiceTest @Autowired constructor(
                 "testId",
                 "testPassword",
                 "홍길동",
-                LocalDate.now(),
-                Gender.MAN,
+                "2000-01-15",
+                "MAN",
                 "hello@world.com"
             )
         )
